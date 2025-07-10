@@ -7,8 +7,346 @@ body {
 
 
 
+/*スリムヘッダー用カスタムcss*/
+/***********************************************************************
+slime_header ver.1.0
+***********************************************************************/
 
 
+/* ▼▼▼ 文字・アイコン・背景色や横幅の変更ここから ▼▼▼
+***********************************************************************/
+.ec-headerRole{
+    max-width: none;/* ヘッダー横幅制限したい場合は1130pxに変更 */
+    background: rgba(255,255,255,.1);/* 背景色を変更 */
+}
+.ec-headerRole .ec-headerTitle a,
+.ec-headerNav .ec-headerNav__itemLink,
+.ec-headerNav .ec-headerNav__item .ec-headerNav__itemIcon,
+.ec-cartNavi,
+.ec-categoryNaviRole__title,
+.ec-headerRole .ec-categoryNaviRole{
+    color: #000;/* ヘッダー基本的な文字・アイコン色を変更 */
+}
+
+@media (min-width:768px){
+
+    .ec-headerRole:hover{
+        background: rgba(255,255,255,1);/* 背景色を変更 */
+    }
+    .ec-headerNav .ec-headerNav__item .ec-headerNav__itemIcon,
+    .ec-cartNavi{
+        color: #000;/* PC時アイコンの色を変更 */
+    } 
+    .ec-headerRole .ec-categoryNaviRole li a{
+        width: 120px;/* カテゴリの横幅変更はこちら */
+        color: #000;/* カテゴリの文字色を変更 */
+        background: rgba(255,255,255,1);/* カテゴリの背景色変更はこちら rgba(255,255,255,0.8) ← #fffなどの形式でも指定可能 */
+    }
+    .ec-headerRole .ec-categoryNaviRole ul ul{
+        left: 120px; /* カテゴリ横幅変更時に合わせて同じ数値に変更 */
+    }
+    .ec-headerRole .ec-categoryNaviRole li a:hover{
+        background: rgba(250,250,250,1);/* カテゴリhover時の背景色変更はこちら rgba(255,255,255,0.8) ← #fffなどの形式でも指定可能 */
+    }
+    .ec-headerRole .ec-categoryNaviRole li ul:before {
+        color: #000;/* カテゴリの>(アローアイコン)の色変更はこちら */
+    }
+}
+
+/* メインコンテンツ外枠の横幅固定を外す */
+.ec-layoutRole .ec-layoutRole__contents{
+    max-width: none; /* 1150px; */
+}
+
+/* スライドショーの横幅固定を外す */
+.ec-sliderRole{
+   max-width: none; /* 1130px; */
+   padding-left: 0; /* 20px; */
+   padding-right: 0; /* 20px; */
+}
+/* ▲▲▲ 文字・アイコン・背景色や横幅の変更ここまで ▲▲▲
+***********************************************************************/
+
+.ec-headerRole{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 15px 30px;
+    z-index: 999;
+}
+.ec-headerRole .ec-headerTitle{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 0 30px;
+}
+.ec-headerRole .ec-headerNav{
+    margin-right: 0;  
+}
+.ec-headerRole .ec-headerNaviRole{
+    width: auto;
+    max-width: none;
+    padding: 0;
+    margin: 0 0 0 auto;
+}
+.ec-headerNav .ec-headerNav__item{
+    font-size: 14px;
+}
+.ec-headerNav .ec-headerNav__itemIcon {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.ec-headerNav .ec-headerNav__item .ec-headerNav__itemIcon{
+    display: inline-block;
+}
+.ec-cartNavi {
+    padding: 3px 0 0 10px;
+}
+.ec-headerNavSP{
+    top: 8px;
+} 
+.ec-headerNav{
+    display: none;
+}
+.ec-headerRole .ec-categoryNaviRole{
+    display: none;
+}
+
+@media (min-width:768px){
+    .front_page .ec-headerRole{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: 0.4s;
+    }
+    .ec-headerRole a:hover{
+        text-decoration: none;
+        opacity: 0.8;
+    }
+    .ec-headerRole .ec-headerTitle{
+        margin: 0;
+    }
+    .ec-headerRole .ec-headerNav{
+        margin-right: 20px;
+    }
+    .ec-headerNav .ec-headerNav__item{
+        margin: 0 10px;
+    }
+    .ec-headerNav .ec-headerNav__item .ec-headerNav__itemIcon {
+        display: none;/*アイコン表示したい場合はinleine-blockに変更*/
+    }
+    .ec-headerNav .ec-headerNav__item a{
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .ec-headerRole .ec-cartNavi {
+        padding: 12px 17px 10px;
+    }
+    .ec-headerNav{
+        display: block;
+    }
+    .ec-headerRole .ec-categoryNaviRole{
+        position: relative;
+        padding: 0;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000;
+        margin-right: 18px;
+        transform: translateY(1px);
+        max-width: none;
+        width: auto;
+        display: block;
+    }
+    .ec-headerRole .ec-categoryNaviRole__title{
+        cursor: pointer;
+    }
+    .ec-headerRole .ec-categoryNaviRole__item{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        padding-top: 45px;
+    }
+    .ec-headerRole .ec-categoryNaviRole:hover .ec-categoryNaviRole__item{
+        display: block;
+    }
+    .ec-headerRole .ec-categoryNaviRole ul{
+        margin: 0;
+        padding: 0;
+    }
+    .ec-headerRole .ec-categoryNaviRole ul ul{
+        position: absolute;
+        top: 0;
+    }
+    .ec-headerRole .ec-categoryNaviRole ul ul li{
+        display: none;
+    }
+    .ec-headerRole .ec-categoryNaviRole li:hover>ul>li{
+        display: block;
+    }
+    .ec-headerRole .ec-categoryNaviRole li{
+        list-style: none;
+        position: relative;
+        box-sizing: border-box;
+    }
+    .ec-headerRole .ec-categoryNaviRole li a{
+        display: block;
+        padding: 15px;
+    }
+    .ec-headerRole .ec-categoryNaviRole li ul:before {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 8px;
+        position: absolute;
+        top: 18px;
+        right: auto;
+        left: -16px;
+    }
+}
+/***********************************************************************
+ slime_header ここまで
+***********************************************************************/ 
+
+/****************************************************************
+カスタムブロック用css
+**********************************************************************/
+/* カスタマイズ用CSS */
+/*ボタンのデザイン*/
+div .mybutton{
+    text-align: center;
+}
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+*,* :before,
+* :after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;/*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+a.btn-flat {
+    overflow: hidden;
+    padding: 1.5rem 6rem;
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+}
+
+a.btn-flat span {
+  position: relative;
+}
+
+a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 140%;
+  height: 500%;
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-70%) rotate(135deg);
+  transform: translateX(-98%) translateY(-70%) rotate(135deg);
+  background: #23AC38;
+}
+
+a.btn-flat:hover:before {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
+  transform: translateX(-9%) translateY(-25%) rotate(135deg);
+}
+
+div .-eyecatchRole__intro,.memberRole_image{
+    margin-top:50px;
+}
+div .plus-eyecatchRole{
+    display: flex;
+}
+
+/*トップページのデザイン調整kasai*/
+div .announceblock{
+    width: 90%;
+    margin:24px auto;
+    font-size: 16px;
+}
+p .announce{
+    text-align: left;
+    font-size: 16px;
+    color:#333333;
+    margin: 8px 0px 0px 0px;
+}
+
+/*会員登録のcss*/
+div.ec-select select, div.ec-halfInput input, div.ec-zipInput input, div.ec-birth select, div.ec-input input, div.ec-telInput input{
+    font-size: 2rem;
+    height:48px;
+}
+a.ec-blockBtn--action, a.ec-blockBtn--cancel, button.ec-blockBtn--cancel ,button.ec-blockBtn{
+    font-size: 90%;
+}
+
+/*カート追加インプットのcss*/
+.ec-numberInput input{
+    font-size:2rem;
+    padding-right:12px;
+}
+
+div.ec-eyecatchRole__intro{
+    padding-left:5%;
+    margin-top:5%;
+}
+
+div.ec-newsRole{
+    margin-bottom:80px;
+}
+
+.ecRole_image{
+    width:96%;
+    min-width: 360px;
+
+}
+
+img.tokutenimg{
+    width: 100%;
+}
+.tokutencontent{
+    width:100%;
+    margin-bottom:80px;
+}
+.ec-role{
+    max-width: none;
+    width: 90%;
+}
 
 
 
