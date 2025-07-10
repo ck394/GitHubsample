@@ -36,7 +36,7 @@ slime_header ver.1.0
     .ec-headerNav .ec-headerNav__item .ec-headerNav__itemIcon,
     .ec-cartNavi{
         color: #000;/* PC時アイコンの色を変更 */
-    } 
+    }
     .ec-headerRole .ec-categoryNaviRole li a{
         width: 120px;/* カテゴリの横幅変更はこちら */
         color: #000;/* カテゴリの文字色を変更 */
@@ -106,7 +106,7 @@ slime_header ver.1.0
 }
 .ec-headerNavSP{
     top: 8px;
-} 
+}
 .ec-headerNav{
     display: none;
 }
@@ -264,26 +264,26 @@ a.btn-flat {
 }
 
 a.btn-flat span {
-  position: relative;
+    position: relative;
 }
 
 a.btn-flat:before {
-  position: absolute;
-  top: 0;
-  left: 30px;
-  width: 140%;
-  height: 500%;
-  content: '';
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  -webkit-transform: translateX(-98%) translateY(-70%) rotate(135deg);
-  transform: translateX(-98%) translateY(-70%) rotate(135deg);
-  background: #23AC38;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 140%;
+    height: 500%;
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-70%) rotate(135deg);
+    transform: translateX(-98%) translateY(-70%) rotate(135deg);
+    background: #23AC38;
 }
 
 a.btn-flat:hover:before {
-  -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
-  transform: translateX(-9%) translateY(-25%) rotate(135deg);
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
+    transform: translateX(-9%) translateY(-25%) rotate(135deg);
 }
 
 div .-eyecatchRole__intro,.memberRole_image{
