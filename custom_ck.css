@@ -348,6 +348,20 @@ img.tokutenimg{
     width: 90%;
 }
 
+/* 特商法 */
+tr.tokushoho_line{
+    border: 0.3px solid #222222;
+}
+
+
+/* ボタンデザイン */
+.ec-blockBtn--action{
+    background-color: #23AC38;
+
+
+}
+
+
 
 
 
