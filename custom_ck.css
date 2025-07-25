@@ -362,7 +362,10 @@ tr.tokushoho_line{
     border-radius: 180px;
 }
 
-
+.ec-blockBtn--action:hover{
+    background-color: #1F9127;
+    border-color: #1F9127;
+}
 
 
 
