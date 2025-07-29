@@ -7,6 +7,18 @@ body {
 div.ec-shelfRole{
     font-size: 1.3rem;
 }
+/* ボタンデザイン */
+.ec-blockBtn--action,.ec-inlineBtn--action{
+    background-color: #23AC38;
+    border-color: #23AC38;
+    border-radius: 180px;
+}
+
+.ec-blockBtn--action:hover,.ec-blockBtn--action:active,.ec-blockBtn--action:visited.ec-blockBtn--action:focus{
+    background-color: #1F9127;
+    border-color: #1F9127;
+}
+
 button.ec-blockBtn--cancel,button.ec-inlineBtn--cancel{
     background-color: #161616;
     border-radius: 180px;
@@ -371,17 +383,6 @@ tr.tokushoho_line{
 }
 
 
-/* ボタンデザイン */
-.ec-blockBtn--action{
-    background-color: #23AC38;
-    border-color: #23AC38;
-    border-radius: 180px;
-}
-
-.ec-blockBtn--action:hover,.ec-blockBtn--action:active,.ec-blockBtn--action:visited.ec-blockBtn--action:focus{
-    background-color: #1F9127;
-    border-color: #1F9127;
-}
 
 
 
