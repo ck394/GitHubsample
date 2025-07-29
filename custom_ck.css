@@ -371,5 +371,11 @@ tr.tokushoho_line{
 
 
 
+/* 商品リストのデザイン */
+li .ec-shelfGrid__item > p{
+    font-size: 30px;
+}
 
+
+/* 商品リストここまで */
 
