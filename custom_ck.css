@@ -14,16 +14,16 @@ div.ec-shelfRole{
     border-radius: 180px;
 }
 
-.ec-blockBtn--action:hover,.ec-blockBtn--action:active,.ec-blockBtn--action:visited.ec-blockBtn--action:focus{
+.ec-blockBtn--action:active{
     background-color: #1F9127;
     border-color: #1F9127;
 }
 
-button.ec-blockBtn--cancel,button.ec-inlineBtn--cancel{
+.ec-blockBtn--cancel, .ec-inlineBtn--cancel{
     background-color: #161616;
     border-radius: 180px;
 }
-button.ec-blockBtn--cancel:active{
+.ec-blockBtn--cancel:active{
     background-color: #3D3D3D;
     border-radius: 180px;
 }
