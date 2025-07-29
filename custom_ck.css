@@ -7,8 +7,12 @@ body {
 div.ec-shelfRole{
     font-size: 1.3rem;
 }
-button.ec-blockBtn--cancel{
+button.ec-blockBtn--cancel,button.ec-inlineBtn--cancel{
     background-color: #161616;
+    border-radius: 180px;
+}
+button.ec-blockBtn--cancel:active{
+    background-color: #3D3D3D;
     border-radius: 180px;
 }
 
