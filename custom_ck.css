@@ -3,6 +3,11 @@ body {
     font-weight: normal;
     font-family: 'Lato', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
+/* ec全般の設定 */
+div.ec-shelfRole{
+    font-size: 1.3rem;
+}
+
 
 /* スリムヘッダー用のカスタムcss */
 
@@ -372,7 +377,7 @@ tr.tokushoho_line{
 
 
 /* 商品リストのデザイン */
-li .ec-shelfGrid__item > p{
+li.ec-shelfGrid__item > p{
     font-size: 30px;
 }
 
