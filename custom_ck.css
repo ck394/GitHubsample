@@ -12,6 +12,7 @@ div.ec-shelfRole{
     background-color: #23AC38;
     border-color: #23AC38;
     border-radius: 180px;
+    padding: auto 64px;
 }
 
 .ec-blockBtn--action:active{
