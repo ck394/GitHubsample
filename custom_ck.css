@@ -7,6 +7,12 @@ body {
 div.ec-shelfRole{
     font-size: 1.3rem;
 }
+button.ec-blockBtn--cancel{
+    background-color: #161616;
+    border-radius: 180px;
+}
+
+/* ec全般の設定ここまで */
 
 
 /* スリムヘッダー用のカスタムcss */
