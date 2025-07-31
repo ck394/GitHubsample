@@ -16,8 +16,8 @@ div.ec-shelfRole{
 }
 
 .ec-blockBtn--action:active{
-    background-color: #1F9127;
-    border-color: #1F9127;
+    background-color: #1F9127!important;
+    border-color: #1F9127!important;
 }
 
 .ec-blockBtn--cancel, .ec-inlineBtn--cancel{
@@ -25,7 +25,7 @@ div.ec-shelfRole{
     border-radius: 180px;
 }
 .ec-blockBtn--cancel:active{
-    background-color: #3D3D3D;
+    background-color: #3D3D3D!important;
     border-radius: 180px;
 }
 
